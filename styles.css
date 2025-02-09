@@ -349,24 +349,45 @@ section h2 {
     color: white;
     text-align: center;
     padding: 80px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .registration h2 {
     color: white;
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
 }
 
 .registration-benefits {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 15px;
-    margin: 2rem auto;
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 20px;
 }
 
-.registration-benefits p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
+.benefit-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.benefit-item i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.benefit-item p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 0;
+    word-break: keep-all;
 }
 
 .register-btn {
@@ -497,12 +518,22 @@ footer {
     }
 
     .registration-benefits {
-        padding: 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 20px;
     }
 
-    .register-btn {
-        padding: 1rem 2rem;
+    .benefit-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .benefit-item p {
         font-size: 1.1rem;
+    }
+
+    .registration h2 {
+        font-size: 2rem;
+        padding: 0 20px;
     }
 
     .timeline::before {
@@ -696,120 +727,6 @@ html {
     line-height: 1.8;
 }
 
-/* Registration Section Enhancement */
-.registration {
-    position: relative;
-    overflow: hidden;
-}
-
-.registration::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23ffffff10" d="M40,100 a60,60 0 1,0 120,0 a60,60 0 1,0 -120,0"/></svg>') repeat;
-    animation: backgroundMove 20s linear infinite;
-}
-
-.registration-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.registration h2 {
-    font-size: 3.5rem;
-    margin-bottom: 3rem;
-}
-
-.deadline {
-    font-size: 2rem;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-.registration-benefits {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 3rem 0;
-}
-
-.benefit-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-.benefit-item:hover {
-    transform: translateY(-5px);
-}
-
-.register-btn {
-    font-size: 1.8rem;
-    padding: 1.5rem 4rem;
-    margin-top: 3rem;
-}
-
-/* Footer Enhancement */
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    padding: 60px 0;
-}
-
-.target-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-.target-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.4s ease;
-}
-
-.target-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.target-item i {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--light-color);
-    animation: float 3s ease-in-out infinite;
-}
-
-.target-item p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-/* New Animation for Background Movement */
-@keyframes backgroundMove {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
 /* Target Section in Hero */
 .target-section {
     margin: 3rem auto;
@@ -881,207 +798,6 @@ html {
     100% {
         transform: translate(-50%, 20px);
         opacity: 0;
-    }
-}
-
-/* Enhanced Mobile Responsiveness */
-@media (max-width: 768px) {
-    /* Hero Section */
-    .hero {
-        padding: 60px 20px;
-        min-height: auto;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-        line-height: 1.4;
-        padding: 0 20px;
-    }
-
-    /* Stats Section */
-    .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 20px;
-    }
-
-    .stat-item {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(5px);
-        padding: 1.5rem;
-        border-radius: 15px;
-    }
-
-    .stat-item h3 {
-        font-size: 2.2rem;
-    }
-
-    /* Target Section */
-    .target-section {
-        padding: 0 20px;
-    }
-
-    .target-list {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .target-item {
-        padding: 1.5rem;
-    }
-
-    .target-item i {
-        font-size: 2rem;
-    }
-
-    .target-item p {
-        font-size: 1.1rem;
-    }
-
-    /* About Section */
-    .about-heading {
-        font-size: 2rem;
-        padding: 0 20px;
-    }
-
-    .about-subheading {
-        font-size: 1.3rem;
-        padding: 0 20px;
-    }
-
-    .feature-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 20px;
-    }
-
-    /* Program Section */
-    .program-day {
-        padding: 20px 15px;
-        margin-bottom: 30px;
-    }
-
-    .program-day h3 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .timeline-item {
-        flex-direction: column;
-        gap: 10px;
-        margin: 1.5rem 0;
-    }
-
-    .time {
-        width: 100%;
-        min-width: unset;
-        padding: 0.6rem 1rem;
-        font-size: 1rem;
-    }
-
-    .content {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .content h4 {
-        font-size: 1.1rem;
-        margin-bottom: 0.6rem;
-    }
-
-    .content p {
-        font-size: 0.95rem !important;
-        margin: 0.4rem 0;
-    }
-
-    /* Advantages Section */
-    .advantages-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 20px;
-    }
-
-    .advantage-card {
-        padding: 1.5rem;
-    }
-
-    /* Registration Section */
-    .registration-content {
-        padding: 0 20px;
-    }
-
-    .registration h2 {
-        font-size: 2rem;
-    }
-
-    .deadline {
-        font-size: 1.2rem;
-        padding: 1rem;
-    }
-
-    .registration-benefits {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .benefit-item {
-        padding: 1.5rem;
-    }
-
-    .register-btn {
-        font-size: 1.2rem;
-        padding: 1rem 2rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Footer */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 40px 20px;
-    }
-
-    /* Scroll Down Button */
-    .scroll-down {
-        padding: 0.8rem 1.5rem;
-    }
-
-    .scroll-down span {
-        font-size: 1rem;
-    }
-}
-
-/* Tablet Responsiveness */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .subtitle {
-        font-size: 1.6rem;
-    }
-
-    .target-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .advantages-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .registration-benefits {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1201,5 +917,21 @@ section:not(:first-child) {
 
     .content p {
         font-size: 0.95rem;
+    }
+}
+
+/* Tablet Responsiveness for Registration Section */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .registration-benefits {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .benefit-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .benefit-item p {
+        font-size: 1.2rem;
     }
 } 
