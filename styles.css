@@ -1112,4 +1112,49 @@ section:not(:first-child) {
     .benefit-item p {
         font-size: 1.2rem;
     }
+}
+
+/* Poster Section */
+.poster-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+}
+
+.poster-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.poster-container:hover {
+    transform: translateY(-5px);
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Responsive adjustments for poster */
+@media (max-width: 768px) {
+    .poster-section {
+        padding: 40px 0;
+    }
+
+    .poster-container {
+        padding: 15px;
+        margin: 0 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .poster-container {
+        max-width: 600px;
+    }
 } 
