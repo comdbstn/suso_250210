@@ -148,16 +148,37 @@ body {
 }
 
 .main-title {
-    font-size: 5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .highlight {
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--light-color);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: block;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite;
 }
 
 .title-text {
-    font-size: 4.2rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--light-color);
+    margin-top: 0.5rem;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
 }
 
 .subtitle {
@@ -490,11 +511,11 @@ footer {
     }
 
     .highlight {
-        font-size: 2.2rem;
+        font-size: 3.5rem;
     }
 
     .title-text {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .subtitle {
@@ -729,16 +750,110 @@ html {
 
 /* Target Section in Hero */
 .target-section {
-    margin: 3rem auto;
+    margin: 4rem auto;
     max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem 2rem;
 }
 
 .target-section h2 {
     color: var(--light-color);
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.target-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--light-color);
+    border-radius: 2px;
+}
+
+.target-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.target-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.target-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.target-item i {
+    font-size: 3rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.target-item p {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .target-section {
+        margin: 3rem 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .target-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .target-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .target-item i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .target-item p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .target-section {
+        margin: 3.5rem auto;
+        padding: 2.5rem 2rem;
+    }
+
+    .target-list {
+        gap: 1.5rem;
+    }
+
+    .target-item {
+        padding: 2rem 1.5rem;
+    }
 }
 
 /* Scroll Down Button Enhancement */
