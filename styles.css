@@ -873,4 +873,242 @@ html {
         transform: translate(-50%, 20px);
         opacity: 0;
     }
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        padding: 0 20px;
+    }
+
+    /* Stats Section */
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 20px;
+    }
+
+    .stat-item {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .stat-item h3 {
+        font-size: 2.2rem;
+    }
+
+    /* Target Section */
+    .target-section {
+        padding: 0 20px;
+    }
+
+    .target-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .target-item {
+        padding: 1.5rem;
+    }
+
+    .target-item i {
+        font-size: 2rem;
+    }
+
+    .target-item p {
+        font-size: 1.1rem;
+    }
+
+    /* About Section */
+    .about-heading {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+
+    .about-subheading {
+        font-size: 1.3rem;
+        padding: 0 20px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 20px;
+    }
+
+    /* Program Section */
+    .program-day {
+        padding: 30px 20px;
+        margin-bottom: 40px;
+    }
+
+    .program-day h3 {
+        font-size: 1.8rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+
+    .time {
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .content {
+        width: 100%;
+        padding: 1.2rem;
+    }
+
+    .content h4 {
+        font-size: 1.3rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Advantages Section */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 20px;
+    }
+
+    .advantage-card {
+        padding: 1.5rem;
+    }
+
+    /* Registration Section */
+    .registration-content {
+        padding: 0 20px;
+    }
+
+    .registration h2 {
+        font-size: 2rem;
+    }
+
+    .deadline {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .registration-benefits {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .benefit-item {
+        padding: 1.5rem;
+    }
+
+    .register-btn {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 40px 20px;
+    }
+
+    /* Scroll Down Button */
+    .scroll-down {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .scroll-down span {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.6rem;
+    }
+
+    .target-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .registration-benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Additional Touch Device Optimizations */
+@media (hover: none) {
+    .target-item:hover,
+    .feature-item:hover,
+    .advantage-card:hover,
+    .scroll-down:hover,
+    .register-btn:hover {
+        transform: none;
+    }
+}
+
+/* Ensure minimum touch target size */
+@media (max-width: 768px) {
+    .target-item,
+    .feature-item,
+    .advantage-card,
+    .scroll-down,
+    .register-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .target-item i,
+    .feature-item i,
+    .advantage-card i {
+        padding: 10px;
+    }
+}
+
+/* Improved text readability on mobile */
+@media (max-width: 768px) {
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    p, li {
+        font-size: 16px !important;
+        line-height: 1.5;
+    }
 } 
