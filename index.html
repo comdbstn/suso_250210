@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H2 BRIDGE 수소산업 채용박람회</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1 class="main-title">
+                <span class="highlight">H2 BRIDGE</span>
+                수소산업 채용박람회
+            </h1>
+            <p class="subtitle">수소산업 취업의 모든 것!</p>
+            <div class="date-venue">
+                <p><i class="far fa-calendar-alt"></i> 2025.2.27(목) - 2.28(금) 10:00~17:00</p>
+                <p><i class="fas fa-map-marker-alt"></i> aT센터 5층 그랜드홀 (서울 서초구)</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="about fade-in">
+        <div class="container">
+            <h2>친환경 미래 산업에서 내 커리어를 시작하자!</h2>
+            <p class="highlight-text">수소기업 및 연구기관의 채용정보부터, 취업 특강, 모의면접까지!</p>
+            <p class="emphasis">취업을 준비하는 대학생이라면 절대 놓칠 수 없는 기회! 🔥</p>
+        </div>
+    </section>
+
+    <section class="programs">
+        <div class="container">
+            <h2 class="fade-in">놓치면 후회할 프로그램</h2>
+            <div class="program-grid">
+                <div class="program-card">
+                    <i class="fas fa-building"></i>
+                    <h3>수소기업 세미나</h3>
+                    <p>수소산업 트렌드 & 미래 전망</p>
+                    <small>(한국수소연합, 한국에너지기술평가원 등)</small>
+                </div>
+                <div class="program-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>취업 특강</h3>
+                    <p>유퀴즈 출연 취업1인자 황인 대리님의 특강</p>
+                    <small>현대자동차, 가스기술공사, 에어리퀴드 등 주요 기업의 채용 방향 공개!</small>
+                </div>
+                <div class="program-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>채용 상담 & 이력서 컨설팅</h3>
+                    <p>전문가의 피드백으로 취업 경쟁력 UP!</p>
+                </div>
+                <div class="program-card">
+                    <i class="fas fa-users"></i>
+                    <h3>모의면접</h3>
+                    <p>실제 면접처럼 경험하고 피드백 받기</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration fade-in">
+        <div class="container">
+            <h2>사전등록 안내</h2>
+            <p class="deadline"><i class="fas fa-clock"></i> 등록 마감: 2월 24일(월) 18:00까지</p>
+            <a href="https://fairpass.co.kr/RunEventInfo?eventcode=2799" class="register-btn">지금 사전등록하기</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>대상: 수소산업 취업을 꿈꾸는 대학생 & 취업 준비생</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html> 
