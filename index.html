@@ -8,40 +8,78 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="hero">
-        <div class="particles"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="main-title">
-                    <span class="highlight">H2 BRIDGE</span>
-                    <span class="title-text">수소산업 채용박람회</span>
-                </h1>
-                <p class="subtitle">수소산업 취업의 모든 것!</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">참여기업</span>
+    <section class="hero">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="SUSO Logo">
+            </div>
+            
+            <h1>수소산업 취업 설명회</h1>
+            <p class="subtitle">미래를 선도하는 수소산업 분야의 취업 기회를 만나보세요</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3><span class="counter">15</span>+</h3>
+                    <p>참여 기업</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter">50</span>+</h3>
+                    <p>채용 포지션</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter">300</span>+</h3>
+                    <p>예상 참가자</p>
+                </div>
+            </div>
+
+            <div class="target-section">
+                <h2>참가 대상</h2>
+                <div class="target-list">
+                    <div class="target-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>이공계 졸업예정자 및 졸업생</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">채용포지션</span>
+                    <div class="target-item">
+                        <i class="fas fa-industry"></i>
+                        <p>수소산업 분야 취업 희망자</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">1000+</span>
-                        <span class="stat-label">예상 참가자</span>
+                    <div class="target-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <p>관련 전공 석/박사 과정생</p>
                     </div>
                 </div>
-                <div class="date-venue">
-                    <p><i class="far fa-calendar-alt pulse"></i> 2025.2.27(목) - 2.28(금) 10:00~17:00</p>
-                    <p><i class="fas fa-map-marker-alt bounce"></i> aT센터 5층 그랜드홀 (서울 서초구)</p>
-                </div>
-                <a href="#programs" class="scroll-down">
-                    <span>자세히 보기</span>
-                    <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="scroll-down-container">
+                <a href="#program" class="scroll-down">
+                    <span>프로그램 자세히 보기</span>
+                    <div class="chevron-container">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
     <section class="about fade-in">
         <div class="container">
@@ -160,11 +198,6 @@
                     <h3>1:1 상담 우선예약</h3>
                     <p>관심 기업과의 상담 시간 선택권</p>
                 </div>
-                <div class="advantage-card">
-                    <i class="fas fa-book"></i>
-                    <h3>취업 가이드북</h3>
-                    <p>수소산업 취업 전략 가이드 제공</p>
-                </div>
             </div>
         </div>
     </section>
@@ -196,20 +229,6 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <h3>참가 대상</h3>
-                    <div class="target-list">
-                        <div class="target-item">
-                            <p>• 수소산업 취업을 꿈꾸는 대학생</p>
-                        </div>
-                        <div class="target-item">
-                            <p>• 신입/경력 취업 준비생</p>
-                        </div>
-                        <div class="target-item">
-                            <p>• 수소 분야 전공자 및 관심있는 모든 분</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="footer-contact">
                     <h3>문의처</h3>
                     <div class="contact-info">
@@ -241,19 +260,57 @@
             observer.observe(element);
         });
 
-        // Particle animation for hero section
+        // Enhanced particle animation
         function createParticles() {
             const particles = document.querySelector('.particles');
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 100; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + 'vw';
                 particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = 10 + Math.random() * 20 + 's';
                 particles.appendChild(particle);
             }
         }
 
+        // Number counting animation
+        function animateNumbers() {
+            document.querySelectorAll('.counting').forEach(number => {
+                const target = parseInt(number.textContent);
+                let current = 0;
+                const increment = target / 50;
+                const duration = 2000;
+                const step = duration / 50;
+
+                const updateNumber = () => {
+                    current += increment;
+                    if (current < target) {
+                        number.textContent = Math.floor(current) + '+';
+                        setTimeout(updateNumber, step);
+                    } else {
+                        number.textContent = target + '+';
+                    }
+                };
+                updateNumber();
+            });
+        }
+
+        // Initialize animations
         createParticles();
+        
+        // Trigger number animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelector('.hero-stats').forEach(stats => {
+            statsObserver.observe(stats);
+        });
     </script>
 </body>
 </html> 
